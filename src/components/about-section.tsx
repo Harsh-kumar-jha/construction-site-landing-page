@@ -2,10 +2,29 @@
 
 import { Building2, Clock, MapPin, Phone, Hammer, Award } from "lucide-react"
 import { motion } from "motion/react"
-import { useEffect, useState } from "react"
 
 interface AboutSectionProps {
   images?: string[]
+}
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
 }
 
 const aboutData = {
@@ -35,97 +54,42 @@ const aboutData = {
   ],
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 },
-  },
-}
-
 export default function AboutSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const defaultImages = [
-    "../../assets/image-1.jpg",
-    "../../assets/image-2.jpg",
-  ]
-
-  const displayImages = defaultImages
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % displayImages.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [displayImages.length]);
-
-
   return (
     <section className="w-full py-20 bg-secondary/5" id="about">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Top Section: Image Left + Content Right */}
         <motion.div
-          className="grid md:grid-cols-2 gap-12 items-center"
+          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
         >
-          <motion.div className="relative" variants={itemVariants}>
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <motion.div
-                className="flex"
-                animate={{ x: `-${ currentIndex * 100 }%` }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-              >
-                {displayImages.map((image, i) => (
-                  <img
-                    key={i}
-                    src={image}
-                    alt=""
-                    className="w-full flex-shrink-0 object-cover aspect-square"
-                  />
-                ))}
-              </motion.div>
-
-              {/* Buttons */}
-              <button
-                onClick={() => setCurrentIndex((currentIndex - 1 + displayImages.length) % displayImages.length)}
-                className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 text-white px-3 py-1 rounded-full"
-              >
-                ‹
-              </button>
-
-              <button
-                onClick={() => setCurrentIndex((currentIndex + 1) % displayImages.length)}
-                className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 text-white px-3 py-1 rounded-full"
-              >
-                ›
-              </button>
-            </div>
+          {/* Top Left Image */}
+          <motion.div
+            className="w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg"
+            variants={itemVariants}
+          >
+            <img
+              src="../../assets/image-1.jpg"
+              alt="Construction site"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
 
-
-          <motion.div className="space-y-8" variants={containerVariants}>
+          {/* Top Right Content */}
+          <motion.div className="space-y-6" variants={containerVariants}>
             <motion.div variants={itemVariants}>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{aboutData.name}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">{aboutData.description}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                {aboutData.name}
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                {aboutData.description}
+              </p>
             </motion.div>
 
-            <motion.div className="grid grid-cols-1 gap-4" variants={containerVariants}>
+            <motion.div className="space-y-4" variants={containerVariants}>
               {[
                 {
                   icon: Clock,
@@ -154,32 +118,62 @@ export default function AboutSection() {
                     <Icon className="text-accent flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="text-sm text-muted-foreground">{item.label}</p>
-                      <p className="text-xl font-semibold text-foreground">{item.value}</p>
+                      <p className="text-lg font-semibold text-foreground">{item.value}</p>
                     </div>
                   </motion.div>
                 )
               })}
             </motion.div>
+          </motion.div>
+        </motion.div>
 
-            <motion.div className="space-y-3" variants={itemVariants}>
-              <h3 className="text-lg font-semibold text-foreground">Our Specialties</h3>
-              <div className="space-y-2">
-                {aboutData.specialties.map((specialty, index) => {
-                  const Icon = specialty.icon
-                  return (
-                    <motion.div
-                      key={index}
-                      className="flex items-center gap-3 text-muted-foreground p-2 rounded-lg hover:bg-primary/5 transition-colors"
-                      whileHover={{ x: 8 }}
-                      variants={itemVariants}
-                    >
-                      <Icon size={18} className="text-accent flex-shrink-0" />
-                      <span>{specialty.title}</span>
-                    </motion.div>
-                  )
-                })}
-              </div>
-            </motion.div>
+        {/* Bottom Section: Content Left + Image Right */}
+        <motion.div
+          className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+        >
+          {/* Bottom Left Content */}
+          <motion.div className="space-y-4 order-2 md:order-1" variants={containerVariants}>
+            <motion.h3
+              className="text-2xl md:text-3xl font-bold text-foreground"
+              variants={itemVariants}
+            >
+              Our Specialties
+            </motion.h3>
+            <div className="space-y-4">
+              {aboutData.specialties.map((specialty, index) => {
+                const Icon = specialty.icon
+                return (
+                  <motion.div
+                    key={index}
+                    className="p-4 rounded-lg hover:bg-primary/5 transition-colors border border-border"
+                    variants={itemVariants}
+                    whileHover={{ x: 8, scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <Icon size={24} className="text-accent flex-shrink-0" />
+                      <h4 className="text-lg font-semibold text-foreground">{specialty.title}</h4>
+                    </div>
+                    <p className="text-muted-foreground ml-9">{specialty.description}</p>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </motion.div>
+
+          {/* Bottom Right Image */}
+          <motion.div
+            className="w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg order-1 md:order-2"
+            variants={itemVariants}
+          >
+            <img
+              src="../../assets/image-2.jpg"
+              alt="Construction project"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
         </motion.div>
       </div>

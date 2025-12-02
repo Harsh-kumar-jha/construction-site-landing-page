@@ -1,8 +1,6 @@
 "use client"
 
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react"
-import { motion } from "motion/react"
-
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 export default function Footer() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,45 +25,41 @@ export default function Footer() {
   return (
     <footer className="w-full bg-foreground text-white">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <motion.div
+        <div
           className="grid md:grid-cols-4 gap-8 mb-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
         >
           {/* Brand */}
-          <motion.div className="space-y-4" variants={itemVariants}>
+          <div className="space-y-4" >
             <h3 className="text-xl font-bold">BuildCraft</h3>
             <p className="text-white/80 text-sm leading-relaxed">
               Quality construction & contract work services for all your building needs.
             </p>
-          </motion.div>
+          </div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants}>
+          <div >
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-white/80">
               <li>
-                <motion.a href="#hero" className="hover:text-primary transition-colors" whileHover={{ x: 4 }}>
+                <a href="#hero" className="hover:text-primary transition-colors cursor-pointer">
                   Home
-                </motion.a>
+                </a>
               </li>
               <li>
-                <motion.a href="#about" className="hover:text-primary transition-colors" whileHover={{ x: 4 }}>
+                <a href="#about" className="hover:text-primary transition-colors cursor-pointer">
                   About Us
-                </motion.a>
+                </a>
               </li>
               <li>
-                <motion.a href="#contact" className="hover:text-primary transition-colors" whileHover={{ x: 4 }}>
+                <a href="#contact" className="hover:text-primary transition-colors cursor-pointer" >
                   Contact
-                </motion.a>
+                </a>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Services */}
-          <motion.div variants={itemVariants}>
+          <div >
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-white/80">
               <li>Residential Construction</li>
@@ -73,73 +67,67 @@ export default function Footer() {
               <li>Renovations</li>
               <li>Interior Finishing</li>
             </ul>
-          </motion.div>
+          </div>
 
           {/* Contact Info */}
-          <motion.div variants={itemVariants}>
+          <div >
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3 text-sm text-white/80">
-              <motion.div className="flex items-center gap-2" whileHover={{ x: 4 }}>
+              <div className="flex items-center gap-2" >
                 <Phone size={16} />
-                <span>(555) 123-4567</span>
-              </motion.div>
-              <motion.div className="flex items-center gap-2" whileHover={{ x: 4 }}>
+                <span>+91 9712902617,</span>
+                <span>+91 9624117814</span>
+              </div>
+              <div className="flex items-center gap-2" >
                 <Mail size={16} />
-                <span>info@buildcraft.com</span>
-              </motion.div>
-              <motion.div className="flex items-center gap-2" whileHover={{ x: 4 }}>
+                <span>swaroopinfrabuild6161@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2" >
                 <MapPin size={16} />
-                <span>Metro Area, State</span>
-              </motion.div>
+                <span>
+                  Krishna Estate, Nr Krishna way Bridge, Kathwada Singgarva road, Kathwada
+                </span>
+              </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Social & Bottom */}
-        <motion.div
+        <div
           className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-white/60 text-sm">&copy; 2025 BuildCraft. All rights reserved.</p>
-          <motion.div
+          <div
             className="flex gap-4 mt-4 md:mt-0"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
           >
-            <motion.a
+            {/* <a
               href="#"
               className="text-white/60 hover:text-primary transition-colors"
               aria-label="Facebook"
-              variants={itemVariants}
-              whileHover={{ scale: 1.2 }}
             >
               <Facebook size={20} />
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#"
               className="text-white/60 hover:text-primary transition-colors"
               aria-label="Twitter"
-              variants={itemVariants}
-              whileHover={{ scale: 1.2 }}
+
+
             >
               <Twitter size={20} />
-            </motion.a>
-            <motion.a
-              href="#"
+            </a> */}
+            <a
+              href="https://www.instagram.com/_swaroop_infra_build_?igsh=dG45eWQ0dHF0YXY%3D&utm_source=qr"
+              target="_blank"
               className="text-white/60 hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-              variants={itemVariants}
-              whileHover={{ scale: 1.2 }}
+              aria-label="Instagram"
+
+
             >
-              <Linkedin size={20} />
-            </motion.a>
-          </motion.div>
-        </motion.div>
+              <Instagram size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   )

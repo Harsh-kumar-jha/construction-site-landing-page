@@ -34,11 +34,11 @@ export default function Header() {
             <motion.img
               src="../assets/swaroop-logo.png"
               alt="Company Logo"
-              className="h-30 w-30 object-contain logo-visible"
+              className="h-12 w-12 object-contain"
               whileHover={{ rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
-            <span className="font-bold text-lg  hidden sm:inline text-green-900">AMAR INSTRUMENTS LLP</span>
+            <span className="font-bold text-sm sm:text-lg text-green-900">AMAR INSTRUMENTS LLP</span>
           </motion.div>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -46,7 +46,7 @@ export default function Header() {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-accent transition-colors font-medium relative group text-green-900"
+                className="hover:text-accent transition-colors font-medium relative group text-green-900 cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -64,7 +64,7 @@ export default function Header() {
             ))}
             <motion.button
               onClick={() => scrollToSection("contact")}
-              className="bg-green-900 hover:bg-accent/90 text-accent-foreground font-bold py-2 px-6 rounded-lg transition-colors"
+              className="bg-green-900 hover:bg-green-800 text-white font-bold py-2 px-6 rounded-lg transition-colors cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -74,7 +74,7 @@ export default function Header() {
 
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
+            className="md:hidden text-green-900"
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
           >
@@ -105,7 +105,7 @@ export default function Header() {
         <AnimatePresence>
           {isOpen && (
             <motion.nav
-              className="md:hidden pb-4 space-y-2 border-t border-border"
+              className="md:hidden pb-4 space-y-2 border-t border-green-900/20 bg-white/95 backdrop-blur-sm rounded-b-lg mt-2"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -115,7 +115,7 @@ export default function Header() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="block w-full text-left px-4 py-2 text-green-900 font-medium hover:bg-green-50 rounded-lg transition-colors"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -125,8 +125,8 @@ export default function Header() {
               ))}
               <motion.button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold py-2 px-4 rounded-lg transition-colors"
-                initial={{ opacity: 0, x: -20 }}
+                className="block w-full bg-green-900 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+                initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navItems.length * 0.05 }}
               >

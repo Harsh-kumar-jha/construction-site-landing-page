@@ -119,7 +119,7 @@ export default function ContactForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <CheckCircle className="text-green-600 flex-shrink-0" size={24} />
+            <CheckCircle className="text-green-600 shrink-0" size={24} />
             <div>
               <p className="font-semibold text-green-900">Your request has been submitted!</p>
               <p className="text-green-800 text-sm">We'll review your project details and contact you soon.</p>
@@ -135,7 +135,7 @@ export default function ContactForm() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <AlertCircle className="text-red-600 flex-shrink-0" size={24} />
+            <AlertCircle className="text-red-600 shrink-0" size={24} />
             <div>
               <p className="font-semibold text-red-900">Error</p>
               <p className="text-red-800 text-sm">{error}</p>
@@ -164,7 +164,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               placeholder="John Doe"
-              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground cursor-pointer"
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             />
@@ -183,7 +183,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               placeholder="(555) 123-4567"
-              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground cursor-pointer"
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             />
@@ -202,7 +202,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               placeholder="john@example.com"
-              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground cursor-pointer"
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             />
@@ -219,7 +219,7 @@ export default function ContactForm() {
               value={formData.workType}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground cursor-pointer"
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
@@ -245,7 +245,7 @@ export default function ContactForm() {
               required
               placeholder="Tell us about your project..."
               rows={5}
-              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground resize-none"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground resize-none cursor-pointer"
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             />
@@ -255,7 +255,7 @@ export default function ContactForm() {
           <motion.button
             type="submit"
             disabled={loading}
-            className="w-full bg-primary hover:bg-primary/90 disabled:bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-primary hover:bg-primary/90 disabled:bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
             variants={formVariants}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

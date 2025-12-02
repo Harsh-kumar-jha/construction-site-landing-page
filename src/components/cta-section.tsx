@@ -56,7 +56,7 @@ export default function CTASection({ onContactClick }: CTASectionProps) {
         </motion.p>
         <motion.button
           onClick={onContactClick}
-          className="bg-white text-accent hover:bg-gray-100 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-200"
+          className="bg-white text-green-900 hover:bg-gray-100 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-200 cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
