@@ -1,131 +1,86 @@
 "use client"
 
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
-export default function Footer() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  }
+import { Phone, Mail, MapPin } from "lucide-react"
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  }
+export default function Footer() {
+  const footerLinks = [
+    { label: "Projects", href: "#configurations" },
+    { label: "Farmhouse", href: "#gallery" },
+    { label: "Legalities", href: "#rera-compliance" },
+    { label: "Team", href: "#about" },
+    { label: "Forum", href: "#gallery" },
+    { label: "Get in touch", href: "#contact" },
+  ]
 
   return (
-    <footer className="w-full bg-foreground text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div
-          className="grid md:grid-cols-4 gap-8 mb-8"
-        >
+    <footer className="w-full bg-primary text-white">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4" >
-            <h3 className="text-xl font-bold">BuildCraft</h3>
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>AMAR INSTRUMENTS LLP</h3>
             <p className="text-white/80 text-sm leading-relaxed">
-              Quality construction & contract work services for all your building needs.
+              Premium property development with excellence and trust in Ahmedabad.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div >
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+          <div>
+            <h4 className="font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Quick Links</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>
-                <a href="#hero" className="hover:text-primary transition-colors cursor-pointer">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-primary transition-colors cursor-pointer">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-primary transition-colors cursor-pointer" >
-                  Contact
-                </a>
-              </li>
+              {footerLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} className="hover:text-secondary transition-colors cursor-pointer">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services */}
-          <div >
-            <h4 className="font-semibold mb-4">Services</h4>
+          {/* Projects */}
+          <div>
+            <h4 className="font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Our Projects</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>Residential Construction</li>
-              <li>Commercial Projects</li>
-              <li>Renovations</li>
-              <li>Interior Finishing</li>
+              <li>Swaroop - Girnaar Technopark</li>
+              <li>Residential Townships</li>
+              <li>Commercial Spaces</li>
+              <li>Premium Villas</li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div >
-            <h4 className="font-semibold mb-4">Contact Info</h4>
+          <div>
+            <h4 className="font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Contact Info</h4>
             <div className="space-y-3 text-sm text-white/80">
-              <div className="flex items-center gap-2" >
-                <Phone size={16} />
-                <span>+91 9712902617,</span>
-                <span>+91 9624117814</span>
+              <div className="flex items-start gap-2">
+                <Phone size={16} className="mt-1 shrink-0" />
+                <div>
+                  <div>+91 9712902617</div>
+                  <div>+91 9624117814</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2" >
-                <Mail size={16} />
-                <span>swaroopinfrabuild6161@gmail.com</span>
+              <div className="flex items-start gap-2">
+                <Mail size={16} className="mt-1 shrink-0" />
+                <span>Swaroopinfrabuild6161@gmail.com</span>
               </div>
-              <div className="flex items-center gap-2" >
-                <MapPin size={16} />
+              <div className="flex items-start gap-2">
+                <MapPin size={16} className="mt-1 shrink-0" />
                 <span>
-                  Krishna Estate, Nr Krishna way Bridge, Kathwada Singgarva road, Kathwada
+                  SG Highway, Vaishnodev Junction, Ahmedabad
                 </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Social & Bottom */}
-        <div
-          className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center"
-        >
-          <p className="text-white/60 text-sm">&copy; 2025 BuildCraft. All rights reserved.</p>
-          <div
-            className="flex gap-4 mt-4 md:mt-0"
-          >
-            {/* <a
-              href="#"
-              className="text-white/60 hover:text-primary transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-white/60 hover:text-primary transition-colors"
-              aria-label="Twitter"
-
-
-            >
-              <Twitter size={20} />
-            </a> */}
-            <a
-              href="https://www.instagram.com/_swaroop_infra_build_?igsh=dG45eWQ0dHF0YXY%3D&utm_source=qr"
-              target="_blank"
-              className="text-white/60 hover:text-primary transition-colors"
-              aria-label="Instagram"
-
-
-            >
-              <Instagram size={20} />
-            </a>
+        {/* Bottom */}
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/60 text-sm">&copy; 2025 AMAR INSTRUMENTS LLP. All rights reserved.</p>
+          <div className="flex gap-4 text-sm text-white/60">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
