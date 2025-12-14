@@ -3,7 +3,6 @@
 import { motion } from "motion/react"
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
 
 export default function GallerySection() {
   const [activeTab, setActiveTab] = useState<"exterior" | "interior">("exterior")
@@ -16,7 +15,7 @@ export default function GallerySection() {
       { src: "/assets/5.png", alt: "Property Layout View" },
     ],
     interior: [
-      { src: "/assets/WhatsApp Image 2025-12-10 at 14.04.45_e72ef43c.jpg", alt: "Interior Space" },
+      { src: "/assets/WhatsApp%20Image%202025-12-10%20at%2014.04.45_e72ef43c.jpg", alt: "Interior Space" },
       { src: "/assets/image-1.jpg", alt: "Interior Detail" },
       { src: "/assets/image-2.jpg", alt: "Interior Layout" },
     ]
@@ -88,12 +87,10 @@ export default function GallerySection() {
               transition={{ duration: 0.3 }}
               className="absolute inset-0"
             >
-              <Image
+              <img
                 src={currentImages[currentImage].src}
                 alt={currentImages[currentImage].alt}
-                fill
-                className="object-cover"
-                priority={currentImage === 0}
+                className="w-full h-full object-cover"
               />
             </motion.div>
           </div>
