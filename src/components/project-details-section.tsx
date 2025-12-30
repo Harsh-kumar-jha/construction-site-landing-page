@@ -38,7 +38,7 @@ export default function ProjectDetailsSection() {
     {
       id: 4,
       name: "Swaroop Greens",
-      photo: "/assets/WhatsApp%20Image%202025-12-10%20at%2014.04.45_e72ef43c.jpg",
+      photo: "/assets/WhatsApp Image 2025-12-10 at 14.04.45_e72ef43c.jpg",
       description: "Modern eco-friendly development with sustainable living spaces"
     }
   ]
