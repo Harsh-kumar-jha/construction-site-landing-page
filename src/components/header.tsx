@@ -18,11 +18,9 @@ export default function Header() {
 
   const navItems = [
     { label: "Home", id: "hero" },
-    { label: "Projects", id: "configurations" },
+    // { label: "Projects", id: "configurations" },
     { label: "The Swaroop", id: "why-section" },
-    { label: "Legalities", id: "rera-compliance" },
     { label: "Team", id: "about" },
-    { label: "Forum", id: "gallery" },
     { label: "Get in touch", id: "contact" },
   ]
 
@@ -34,11 +32,7 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <motion.div className="flex items-center" whileHover={{ scale: 1.02 }}>
-            <span className="font-bold text-2xl text-primary" style={{ fontFamily: 'Poppins, sans-serif' }}>AMAR INSTRUMENTS LLP</span>
-          </motion.div>
-
+        <div className="flex justify-center items-center h-20">
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item, index) => (
               <motion.button

@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>AMAR INSTRUMENTS LLP</h3>
+            <h3 className="text-2xl font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>Swaroop Infra Build</h3>
             <p className="text-white/80 text-sm leading-relaxed">
               Premium property development with excellence and trust in Ahmedabad.
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/60 text-sm">&copy; 2025 AMAR INSTRUMENTS LLP. All rights reserved.</p>
+          <p className="text-white/60 text-sm">&copy; 2025 Swaroop Infra Build. All rights reserved.</p>
           <div className="flex gap-4 text-sm text-white/60">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <span>•</span>
