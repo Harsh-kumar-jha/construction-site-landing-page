@@ -30,14 +30,14 @@ export default function CTASection({ onContactClick }: CTASectionProps) {
             >
               Get in Touch
             </motion.button>
-            <motion.button
+            {/* <motion.button
               onClick={onContactClick}
               className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition-all font-medium text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Site Visit
-            </motion.button>
+            </motion.button> */}
           </div>
         </motion.div>
       </div>

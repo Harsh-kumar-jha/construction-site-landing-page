@@ -19,25 +19,25 @@ export default function ProjectDetailsSection() {
   const projects: Project[] = [
     {
       id: 1,
-      name: "Swaroop Residency",
+      name: "Amar Instruments LLP",
       photo: "/assets/image-1.jpg",
       description: "Premium residential apartments with modern amenities",
     },
     {
       id: 2,
-      name: "Swaroop Heights",
+      name: "Bungalow",
       photo: "/assets/image-2.jpg",
       description: "Luxury high-rise living in the heart of the city",
     },
     {
       id: 3,
-      name: "Swaroop Villas",
+      name: "Colourinn Industries PVT LTD",
       photo: "/assets/5.png",
       description: "Exclusive villa community with private gardens",
     },
     {
       id: 4,
-      name: "Swaroop Greens",
+      name: "Galson Engineering Service",
       photo: "/assets/WhatsApp%20Image%202025-12-10%20at%2014.04.45_e72ef43c.jpg",
       description: "Modern eco-friendly development with sustainable living spaces"
     }
@@ -122,7 +122,7 @@ export default function ProjectDetailsSection() {
                   />
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
 
                   {/* Project Details Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">

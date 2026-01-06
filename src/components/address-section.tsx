@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, FileDown } from "lucide-react"
 import { motion } from "motion/react"
 
 export default function AddressSection() {
@@ -48,13 +48,21 @@ export default function AddressSection() {
               whileHover={{ y: -5 }}
             >
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                <MapPin className="text-primary" size={32} />
+                <FileDown className="text-primary" size={32} />
               </div>
+
               <div>
-                <h3 className="font-semibold text-lg text-foreground mb-2">Our Address</h3>
-                <p className="text-muted-foreground">
-                  SG Highway, Vaishnodev Junction, Ahmedabad
-                </p>
+                <h3 className="font-semibold text-lg text-foreground mb-2">
+                  Download Brochure
+                </h3>
+
+                <a
+                  href="/Swaroop_infra_Brochure.pdf"
+                  download="Swaroop_infra_Brochure.pdf"
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                >
+                  Click here to download our brochure
+                </a>
               </div>
             </motion.div>
 
@@ -71,10 +79,13 @@ export default function AddressSection() {
                 <h3 className="font-semibold text-lg text-foreground mb-2">Phone Numbers</h3>
                 <p className="text-muted-foreground">
                   <a href="tel:+919712902617" className="hover:text-primary transition-colors block">
-                    +91 9712902617
+                    +91 9712902617 - Hitesh Bhai
                   </a>
                   <a href="tel:+919624117814" className="hover:text-primary transition-colors block">
-                    +91 9624117814
+                    +91 9624117814 - Harshil Bhai
+                  </a>
+                  <a href="tel:+916359736669" className="hover:text-primary transition-colors block">
+                    +91 6359736669 - Rajnii Patel
                   </a>
                 </p>
               </div>

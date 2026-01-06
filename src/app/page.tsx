@@ -11,6 +11,7 @@ import WhyWaveSection from "../components/why-wave-section"
 import SalientFeaturesSection from "../components/salient-features-section"
 import LocationSection from "../components/location-section"
 import AboutSection from "../components/about-section"
+import ServicesSection from "../components/services-section"
 import CTASection from "../components/cta-section"
 import ContactForm from "../components/contact-form"
 import Footer from "../components/footer"
@@ -31,7 +32,9 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <HeroVideo onContactClick={() => scrollToSection("contact")} />
+      <section id="hero" className="w-full">
+        <HeroVideo onContactClick={() => scrollToSection("contact")} />
+      </section>
 
       {/* Address Section */}
       <AddressSection />
@@ -40,23 +43,30 @@ export default function Home() {
       <ProjectDetailsSection />
 
       {/* Tagline Section */}
-      <TaglineSection />
+      {/* <TaglineSection /> */}
 
       {/* Configurations Section */}
-      <ConfigurationsSection />
+      {/* <ConfigurationsSection /> */}
 
-      {/* Why Wave Section */}
+      {/* Why Choose Us Section */}
       <WhyWaveSection />
 
       {/* Salient Features Section */}
-      <SalientFeaturesSection />
+      {/* <SalientFeaturesSection /> */}
 
       {/* Location Section */}
-      <LocationSection />
+      <section id="location" className="w-full">
+        <LocationSection />
+      </section>
 
       {/* About Section (Team) */}
       <section id="about" className="w-full">
         <AboutSection />
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="w-full">
+        <ServicesSection />
       </section>
 
       {/* CTA Section */}
