@@ -41,7 +41,6 @@ export default function AddressSection() {
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {/* Address */}
             <motion.div
               className="flex flex-col items-center text-center space-y-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
               variants={itemVariants}
@@ -57,8 +56,10 @@ export default function AddressSection() {
                 </h3>
 
                 <a
-                  href="/Swaroop_infra_Brochure.pdf"
+                  href="/assets/Swaroop_infra_Brochure.pdf"
                   download="Swaroop_infra_Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
                 >
                   Click here to download our brochure

@@ -26,15 +26,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         {/* QR Codes Section */}
         <div
-          // initial={{ opacity: 0, y: 30 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          // viewport={{ once: true }}
-          // transition={{ duration: 0.6 }}
-          className="mb-16 pb-12 border-b border-white/10"
+        // initial={{ opacity: 0, y: 30 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // viewport={{ once: true }}
+        // transition={{ duration: 0.6 }}
+        // className="mb-16 pb-12 border-b border-white/10"
         >
-          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20">
-            {/* Instagram QR */}
-            {/* <div
+          {/* <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20"> */}
+          {/* Instagram QR */}
+          {/* <div
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
               className="flex flex-col items-center space-y-4"
@@ -55,8 +55,8 @@ export default function Footer() {
               <p className="text-sm text-green-400 font-medium">@_SWAROOP_INFRA_BUILD_</p>
             </div> */}
 
-            {/* Location QR */}
-            {/* <div
+          {/* Location QR */}
+          {/* <div
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ duration: 0.3 }}
               className="flex flex-col items-center space-y-4"
@@ -76,7 +76,7 @@ export default function Footer() {
               </div>
               <p className="text-sm text-green-400 font-medium">Scan for Directions</p>
             </div> */}
-          </div>
+          {/* </div> */}
         </div>
 
         {/* Main Footer Content */}
@@ -198,7 +198,7 @@ export default function Footer() {
                 <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-green-500/20 transition-colors">
                   <MapPin size={16} />
                 </div>
-                <span>SG Highway, Vaishnodev Junction, Ahmedabad</span>
+                <span>Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430 Ahmedabad</span>
               </div>
             </div>
           </div>

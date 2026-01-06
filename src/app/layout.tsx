@@ -18,10 +18,11 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Swaroop | Premium Property in Nava Vadodara",
+  title: "Swaroop Infra Build | Leading Construction Company in Ahmedabad",
   description:
-    "AMAR INSTRUMENTS LLP - Premium 2BHK, 3BHK and Duplex properties at Girnaar Technopark, Vaishnodev Junction. RERA approved project with world-class amenities.",
+    "Swaroop Infra Build - Premier construction company in Ahmedabad specializing in industrial, commercial & residential projects. Quality materials, experienced team, on-time delivery. Located at SG Highway, Vaishnodev Junction.",
   generator: "v0.app",
+  keywords: "construction company Ahmedabad, industrial construction, commercial construction, residential construction, Swaroop Infra Build, builders in Ahmedabad, construction services Gujarat",
   viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   icons: {
     icon: [

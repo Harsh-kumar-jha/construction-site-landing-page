@@ -35,7 +35,7 @@ export default function LocationSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              SG Highway | <span className="text-secondary">Vaishnodev Junction</span>
+              Krishna Estate | <span className="text-secondary">Kathwada, Ahmedabad</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               A business location that connects everywhere and moves anything.
@@ -81,7 +81,7 @@ export default function LocationSection() {
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
               <p className="text-xs text-primary font-medium leading-relaxed">
-                Shed no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430 Ahmedabad
+                Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430 Ahmedabad
               </p>
             </div>
           </motion.div>
