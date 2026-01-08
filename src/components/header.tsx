@@ -63,7 +63,7 @@ export default function Header() {
               onClick={() => scrollToSection("hero")}
               className="text-2xl font-extrabold text-[#0A2E5C] hover:text-[#154a8a] transition-colors cursor-pointer"
             >
-              Swaroop <span className="text-green-500">Infra</span>
+              Swaroop <span className="text-green-500">Infra</span> Build
             </button>
           </motion.div>
 

@@ -25,13 +25,13 @@ export default function HeroVideo({ videoUrl, onContactClick }: HeroVideoProps) 
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.h1
-            className="text-white text-6xl md:text-8xl font-bold mb-6"
+            className="text-white text-4xl md:text-7xl font-bold mb-6"
             style={{ fontFamily: 'Poppins, sans-serif' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Swaroop <span className="text-green-500">Infra</span>
+            Swaroop <span className="text-green-500">Infra</span> Build
           </motion.h1>
 
           <motion.div
