@@ -31,7 +31,7 @@ export default function HeroVideo({ videoUrl, onContactClick }: HeroVideoProps) 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Swaroop
+            Swaroop <span className="text-green-500">Infra</span>
           </motion.h1>
 
           <motion.div

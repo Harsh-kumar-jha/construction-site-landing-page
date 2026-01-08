@@ -27,7 +27,7 @@ const aboutData = {
   name: "Hitesh bhai and Harshil bhai",
   yearsExperience: "10+ Years",
   serviceArea: "Kathwada, Ahmedabad",
-  address: "Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430",
+  address: " Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singarva road. Kathwada - 342430",
   phone: "+91 9712902617",
   anotherPhone: "+91 9624117814",
   email: "swaroopinfrabuild6161@gmail.com",

@@ -7,19 +7,19 @@ export default function LocationSection() {
   const highlights = [
     {
       icon: <MapPin size={24} />,
-      text: "Direct access to SG Road Ring Road & Sarkhej city"
+      text: "Prime location near Krishna Way Bridge on Kathwada Singarva Road"
     },
     {
       icon: <Clock size={24} />,
-      text: "40 mins to Airport"
+      text: "Well-connected to Ahmedabad city center and major highways"
     },
     {
       icon: <Building2 size={24} />,
-      text: "Surrounded by upcoming residential and hospitals, zones"
+      text: "Part of rapidly developing Kathwada industrial and commercial zone"
     },
     {
       icon: <Car size={24} />,
-      text: "Excellent visibility from one of Ahmedabad's busiest corridor"
+      text: "Easy access to transportation and logistics hubs"
     }
   ]
 
@@ -69,7 +69,7 @@ export default function LocationSection() {
             transition={{ duration: 0.6 }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.234567890123!2d72.6789012!3d23.0123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sKrishna%20Estate%2C%20Kathwada%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.6874982736644!2d72.70127731496632!3d23.088453184918565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9c8c8c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sKrishna%20Estate%2C%20Kathwada%20Singarva%20Road%2C%20Near%20Krishna%20Way%20Bridge%2C%20Kathwada%2C%20Ahmedabad%2C%20Gujarat%20382430!5e0!3m2!1sen!2sin!4v1641234567890!5m2!1sen!2sin&q=Krishna+Estate+Near+Krishna+Way+Bridge+Kathwada+Singarva+Road+Kathwada+Ahmedabad+Gujarat+382430"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -81,7 +81,7 @@ export default function LocationSection() {
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
               <p className="text-xs text-primary font-medium leading-relaxed">
-                Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430 Ahmedabad
+                Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singarva road. Kathwada - 382430 Ahmedabad
               </p>
             </div>
           </motion.div>

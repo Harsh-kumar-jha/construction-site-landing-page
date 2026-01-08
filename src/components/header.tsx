@@ -43,8 +43,8 @@ export default function Header() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${ scrolled
-          ? "bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-200"
-          : "bg-white/95 backdrop-blur-md border-b border-gray-100"
+        ? "bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-200"
+        : "bg-white/95 backdrop-blur-md border-b border-gray-100"
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -110,7 +110,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection("contact")}
-              className="px-5 py-2 bg-gradient-to-r from-[#0A2E5C] to-[#154a8a] text-white rounded-lg font-medium hover:shadow-lg transition-all"
+              className="px-5 py-2 bg-linear-to-r from-[#0A2E5C] to-[#154a8a] text-white rounded-lg font-medium hover:shadow-lg transition-all"
             >
               Get Quote
             </motion.button>

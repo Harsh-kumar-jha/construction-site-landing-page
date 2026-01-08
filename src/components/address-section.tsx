@@ -1,6 +1,6 @@
 "use client"
 
-import { MapPin, Phone, Mail, FileDown } from "lucide-react"
+import { Phone, Mail, FileDown } from "lucide-react"
 import { motion } from "motion/react"
 
 export default function AddressSection() {
@@ -24,7 +24,7 @@ export default function AddressSection() {
   }
 
   return (
-    <section className="w-full py-16 bg-gradient-to-b from-background to-secondary/5">
+    <section className="w-full py-16 bg-linear-to-b from-background to-secondary/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center space-y-8"

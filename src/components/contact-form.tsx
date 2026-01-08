@@ -21,8 +21,7 @@ export default function ContactForm() {
   const workTypes = [
     "Residential Construction",
     "Commercial Construction",
-    "Renovation & Remodeling",
-    "Interior Finishing",
+    "Industrial Construction",
     "Other",
   ]
 

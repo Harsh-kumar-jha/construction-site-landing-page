@@ -198,7 +198,7 @@ export default function Footer() {
                 <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-green-500/20 transition-colors">
                   <MapPin size={16} />
                 </div>
-                <span>Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singgarva road. Kathwada - 342430 Ahmedabad</span>
+                <span> Shop no. B/55 First Floor, Krishna Estate, Nr. Krishna way Bridge, Kathwada singarva road. Kathwada - 342430 Ahmedabad</span>
               </div>
             </div>
           </div>
