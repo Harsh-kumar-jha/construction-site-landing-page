@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare email
     const sendSmtpEmail = new brevo.SendSmtpEmail()
-    sendSmtpEmail.subject = `New Contact Request: ${ workType }`
+    sendSmtpEmail.subject = `New Contact Request: ${ workType } - ${ name }`
     sendSmtpEmail.htmlContent = `
       <html>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -52,13 +52,17 @@ export async function POST(request: NextRequest) {
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #6b7280;">
               <p>This email was sent from your construction site landing page contact form.</p>
+              <p style="margin-top: 5px;"><strong>Reply to this email to respond directly to the customer.</strong></p>
             </div>
           </div>
         </body>
       </html>
     `
-    sendSmtpEmail.sender = { name: "Construction Site Contact", email: "noreply@swaroopinfrabuild.com" }
+    // Use your verified Gmail as sender
+    sendSmtpEmail.sender = { name: "Swaroop Infra Build - Website", email: "swaroopinfrabuild6161@gmail.com" }
+    // Send to your Gmail inbox
     sendSmtpEmail.to = [{ email: "swaroopinfrabuild6161@gmail.com", name: "Swaroop Infra Build" }]
+    // Set reply-to as customer's email so you can reply directly
     sendSmtpEmail.replyTo = { email: email, name: name }
 
     // Send email via Brevo
