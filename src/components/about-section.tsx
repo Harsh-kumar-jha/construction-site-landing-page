@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, Clock, MapPin, Phone, Hammer, Award, Mail } from "lucide-react"
+import { Building2, Clock, MapPin, Phone, Hammer, Award, Mail, Factory } from "lucide-react"
 import { motion } from "motion/react"
 
 const containerVariants = {
@@ -45,10 +45,11 @@ const aboutData = {
       description: "Office buildings and retail spaces",
     },
     {
-      icon: Award,
-      title: "Quality Assurance",
-      description: "Licensed and insured professionals",
-    },
+      icon: Factory,
+      title: "Industrial Projects",
+      description: "Robust project execution for factories, plants, and industrial facilities.",
+    }
+
   ],
 }
 
