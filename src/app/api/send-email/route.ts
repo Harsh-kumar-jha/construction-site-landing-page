@@ -3,7 +3,7 @@ import * as brevo from "@getbrevo/brevo"
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, phone, email, workType, message, contractorEmail } = await request.json()
+    const { name, phone, email, workType, message } = await request.json()
 
     // Validate required fields
     if (!name || !phone || !email || !workType || !message) {
@@ -23,7 +23,6 @@ export async function POST(request: NextRequest) {
       email,
       workType,
       message,
-      contractorEmail,
     })
 
     // Initialize Brevo API client
@@ -58,8 +57,8 @@ export async function POST(request: NextRequest) {
         </body>
       </html>
     `
-    sendSmtpEmail.sender = { name: "Construction Site Contact", email: process.env.BREVO_SENDER_EMAIL || "noreply@yourdomain.com" }
-    sendSmtpEmail.to = [{ email: contractorEmail, name: "Contractor" }]
+    sendSmtpEmail.sender = { name: "Construction Site Contact", email: "noreply@swaroopinfrabuild.com" }
+    sendSmtpEmail.to = [{ email: "swaroopinfrabuild6161@gmail.com", name: "Swaroop Infra Build" }]
     sendSmtpEmail.replyTo = { email: email, name: name }
 
     // Send email via Brevo

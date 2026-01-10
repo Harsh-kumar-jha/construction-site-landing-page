@@ -45,10 +45,7 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          ...formData,
-          contractorEmail: "swaroopinfrabuild6161@gmail.com",
-        }),
+        body: JSON.stringify(formData),
       })
 
       if (response.ok) {
